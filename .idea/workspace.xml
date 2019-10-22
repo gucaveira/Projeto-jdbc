@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0867397-e62b-4e55-a3d9-825cc0967456" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/entidade/dao/DepatamentoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/entidade/dao/VendedorDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/DaoFabrica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/impl/VendedorDaoJDBC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/entidade/dao/DepartamentoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/DepartamentoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/entidade/dao/VendedorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/VendedorDao.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -40,6 +42,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="aplicacao" />
       <recent name="model.entidade.dao" />
       <recent name="model.entidade" />
       <recent name="model" />
@@ -103,7 +106,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

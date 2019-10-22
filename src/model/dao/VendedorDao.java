@@ -1,6 +1,5 @@
-package model.entidade.dao;
+package model.dao;
 
-import model.entidade.Departamento;
 import model.entidade.Vendedor;
 
 import java.util.List;
