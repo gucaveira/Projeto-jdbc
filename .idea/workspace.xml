@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0867397-e62b-4e55-a3d9-825cc0967456" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/entidade/Vendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/entidade/Departamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entidade/Departamento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/entidade/dao/DepatamentoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/entidade/dao/VendedorDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -38,6 +40,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="model.entidade.dao" />
       <recent name="model.entidade" />
       <recent name="model" />
     </key>
@@ -85,6 +88,14 @@
       <option name="presentableId" value="Default" />
       <updated>1571064387466</updated>
     </task>
+    <task id="LOCAL-00001" summary="Criando Classe Vendedor">
+      <created>1571764496632</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571764496632</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,5 +108,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Criando Classe Vendedor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando Classe Vendedor" />
   </component>
 </project>
