@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface DepartamentoDao {
 
-   void inserir(Departamento obj);
+    void inserir(Departamento obj);
 
-   void atualizar(Departamento obj);
+    void atualizar(Departamento obj);
 
-   void deletarPorId(Integer id);
+    void deletarPorId(Integer id);
 
-   Departamento procurarPorId(Integer id);
+    Departamento procurarPorId(Integer id);
 
-   List<Departamento> procurarTodos();
+    List<Departamento> procurarTodos();
 }

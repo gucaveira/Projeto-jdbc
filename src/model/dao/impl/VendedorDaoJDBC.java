@@ -40,16 +40,19 @@ public class VendedorDaoJDBC implements VendedorDao {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try {
-            preparedStatement = conn.prepareStatement("SELECT vendas.*, " +
-                    " departamento.Nome AS DepNameFROM vendas INNER JOIN " +
-                    " departamento vendas.DepartamentoId = departamento.Id WHERE vendas.id = ?");
+            preparedStatement = conn.prepareStatement(
+                    "SELECT vendas.* , departamento.Nome as DepNome " +
+                            "FROM vendas INNER JOIN departamento " +
+                            "ON vendas.DepartamentoId = departamento.Id " +
+                            "WHERE vendas.Id = ?");
+
             preparedStatement.setInt(1, id);
             resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
                 Departamento departamento = new Departamento();
                 departamento.setId(resultSet.getInt("DepartamentoId"));
-                departamento.setNome(resultSet.getString("DepName"));
+                departamento.setNome(resultSet.getString("DepNome"));
                 Vendedor obj = new Vendedor();
                 obj.setId(resultSet.getInt("Id"));
                 obj.setNome(resultSet.getString("Nome"));
@@ -57,9 +60,10 @@ public class VendedorDaoJDBC implements VendedorDao {
                 obj.setSalarioBase(resultSet.getDouble("SalarioBase"));
                 obj.setAniversario(resultSet.getDate("Aniversario"));
                 obj.setDepartament(departamento);
-
+                return obj;
             }
             return null;
+
         } catch (SQLException e) {
             throw new DbException(e.getMessage());
         } finally {
