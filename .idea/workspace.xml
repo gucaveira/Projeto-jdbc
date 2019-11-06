@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0867397-e62b-4e55-a3d9-825cc0967456" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/impl/ComandoSQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/impl/Contantes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aplicacao/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aplicacao/Programa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/Db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/Db.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/DaoFabrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/FabricaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/DepartamentoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/DepartamentoDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/dao/impl/VendedorDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/VendedorDaoJDBC.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -41,9 +37,12 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="model.dao.impl" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="aplicacao" />
       <recent name="model.entidade.dao" />
@@ -115,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571767975484</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Corringo bug sintaxe SQl">
+      <created>1572977290525</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572977290525</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,17 +141,7 @@
     <MESSAGE value="Criando Classe Vendedor" />
     <MESSAGE value="Criando VendedorDaoJDBC e DaoFabrica" />
     <MESSAGE value="Implementando encotraPorId" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementando encotraPorId" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/aplicacao/Programa.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Corringo bug sintaxe SQl" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corringo bug sintaxe SQl" />
   </component>
 </project>

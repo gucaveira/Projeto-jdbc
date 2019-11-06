@@ -12,9 +12,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class VendedorDaoJDBC implements VendedorDao {
+public class VendedorDaoJDBC implements VendedorDao, Contantes, ComandoSQL {
 
     private Connection conn;
+    private int primeiraInterrogacao;
 
     public VendedorDaoJDBC(Connection conn) {
         this.conn = conn;
@@ -39,26 +40,23 @@ public class VendedorDaoJDBC implements VendedorDao {
     public Vendedor procurarPorId(Integer id) {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
+        primeiraInterrogacao = 1;
         try {
             preparedStatement = conn.prepareStatement(
-                    "SELECT vendas.* , departamento.Nome as DepNome " +
-                            "FROM vendas INNER JOIN departamento " +
-                            "ON vendas.DepartamentoId = departamento.Id " +
-                            "WHERE vendas.Id = ?");
-
-            preparedStatement.setInt(1, id);
+                    COMANDO_SQL_ENCONTRAR_PELO_ID);
+            preparedStatement.setInt(primeiraInterrogacao, id);
             resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
                 Departamento departamento = new Departamento();
-                departamento.setId(resultSet.getInt("DepartamentoId"));
-                departamento.setNome(resultSet.getString("DepNome"));
+                departamento.setId(resultSet.getInt(DEPARTAMENTO_ID));
+                departamento.setNome(resultSet.getString(DEP_NOME));
                 Vendedor obj = new Vendedor();
-                obj.setId(resultSet.getInt("Id"));
-                obj.setNome(resultSet.getString("Nome"));
-                obj.setEmail(resultSet.getString("Email"));
-                obj.setSalarioBase(resultSet.getDouble("SalarioBase"));
-                obj.setAniversario(resultSet.getDate("Aniversario"));
+                obj.setId(resultSet.getInt(ID_VENDAS));
+                obj.setNome(resultSet.getString(NOME_VENDAS));
+                obj.setEmail(resultSet.getString(EMAIL_VENDAS));
+                obj.setSalarioBase(resultSet.getDouble(SALARIO_BASE_VENDAS));
+                obj.setAniversario(resultSet.getDate(ANIVERSARIO_VENDAS));
                 obj.setDepartament(departamento);
                 return obj;
             }
