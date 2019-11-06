@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0867397-e62b-4e55-a3d9-825cc0967456" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/dao/impl/ComandoSQL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/dao/impl/Contantes.java" afterDir="false" />
+    <list default="true" id="f0867397-e62b-4e55-a3d9-825cc0967456" name="Default Changelist" comment="Refatorando Code e Criando interface Contantes e ComandoSQL">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aplicacao/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aplicacao/Programa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/VendedorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/VendedorDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/ComandoSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/ComandoSQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/dao/impl/VendedorDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/VendedorDaoJDBC.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,10 +34,12 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -121,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572977290525</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Refatorando Code e Criando interface Contantes e ComandoSQL">
+      <created>1573048651048</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573048651048</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +152,7 @@
     <MESSAGE value="Criando VendedorDaoJDBC e DaoFabrica" />
     <MESSAGE value="Implementando encotraPorId" />
     <MESSAGE value="Corringo bug sintaxe SQl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corringo bug sintaxe SQl" />
+    <MESSAGE value="Refatorando Code e Criando interface Contantes e ComandoSQL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatorando Code e Criando interface Contantes e ComandoSQL" />
   </component>
 </project>
