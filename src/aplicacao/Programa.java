@@ -23,5 +23,12 @@ public class Programa {
                 vendedores) {
             System.out.println(vend);
         }
+
+        System.out.println("\n=== TEST 2: vendas procuraTudo ===");
+        vendedores = vendedorDao.procurarTodos();
+        for (Vendedor vend :
+                vendedores) {
+            System.out.println(vend);
+        }
     }
 }

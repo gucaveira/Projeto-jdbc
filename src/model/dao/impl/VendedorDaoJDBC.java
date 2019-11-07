@@ -52,7 +52,7 @@ public class VendedorDaoJDBC implements VendedorDao, Contantes, ComandoSQL {
 
             if (resultSet.next()) {
                 Departamento departamento = instaciaDepartamento(resultSet);
-                return InstanciaVendedor(resultSet, departamento);
+                return instanciaVendedor(resultSet, departamento);
             }
             return null;
 
@@ -64,7 +64,7 @@ public class VendedorDaoJDBC implements VendedorDao, Contantes, ComandoSQL {
         }
     }
 
-    private Vendedor InstanciaVendedor(ResultSet resultSet, Departamento departamento) throws SQLException {
+    private Vendedor instanciaVendedor(ResultSet resultSet, Departamento departamento) throws SQLException {
         Vendedor obj = new Vendedor();
         obj.setId(resultSet.getInt(ID_VENDAS));
         obj.setNome(resultSet.getString(NOME_VENDAS));
@@ -84,7 +84,30 @@ public class VendedorDaoJDBC implements VendedorDao, Contantes, ComandoSQL {
 
     @Override
     public List<Vendedor> procurarTodos() {
-        return null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            preparedStatement = conn.prepareStatement(SQL_PROCURAR_TUDO);
+            resultSet = preparedStatement.executeQuery();
+            List<Vendedor> vendedores = new ArrayList<>();
+            Map<Integer, Departamento> map = new HashMap<>();
+            while (resultSet.next()) {
+                Departamento dep = map.get(resultSet.getInt(DEPARTAMENTO_ID));
+                if (dep == null) {
+                    dep = instaciaDepartamento(resultSet);
+                    map.put(resultSet.getInt(DEPARTAMENTO_ID), dep);
+                }
+                Vendedor vendedor = instanciaVendedor(resultSet, dep);
+                vendedores.add(vendedor);
+            }
+            return vendedores;
+
+        } catch (SQLException e) {
+            throw new DbException(e.getMessage());
+        } finally {
+            Db.fechandoStatement(preparedStatement);
+            Db.fechandoResultSet(resultSet);
+        }
     }
 
     @Override
@@ -104,11 +127,11 @@ public class VendedorDaoJDBC implements VendedorDao, Contantes, ComandoSQL {
 
                 Departamento dep = map.get(resultSet.getInt(DEPARTAMENTO_ID));
 
-                if (departamento == null) {
-                    departamento = instaciaDepartamento(resultSet);
+                if (dep == null) {
+                    dep = instaciaDepartamento(resultSet);
                     map.put(resultSet.getInt(DEPARTAMENTO_ID), dep);
                 }
-                Vendedor vendedor = InstanciaVendedor(resultSet, departamento);
+                Vendedor vendedor = instanciaVendedor(resultSet, departamento);
                 vendedores.add(vendedor);
             }
             return vendedores;

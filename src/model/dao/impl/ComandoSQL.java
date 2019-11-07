@@ -11,4 +11,9 @@ public interface ComandoSQL {
             " FROM vendas INNER JOIN departamento " +
             " ON vendas.DepartamentoId = departamento.Id " +
             " WHERE DepartamentoId = ? ORDER BY Nome";
+
+    String SQL_PROCURAR_TUDO = "SELECT vendas.*, departamento.Nome as DepNome " +
+            " FROM vendas INNER JOIN departamento " +
+            " ON vendas.DepartamentoId = departamento.Id " +
+            " ORDER BY Nome";
 }
