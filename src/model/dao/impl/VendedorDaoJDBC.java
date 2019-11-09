@@ -59,8 +59,30 @@ public class VendedorDaoJDBC implements VendedorDao, Contantes, ComandoSQL {
     }
 
     @Override
-    public void atualizar(Vendedor obj) {
+    public void atualizar(Vendedor vendedor) {
+        int nome = 1;
+        int email = 2;
+        int data = 3;
+        int salario = 4;
+        int idDeparmento = 5;
+        int idVendedor = 6;
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = conn.prepareStatement(SQL_ATUALIZAR);
+            preparedStatement.setString(nome, vendedor.getNome());
+            preparedStatement.setString(email, vendedor.getEmail());
+            preparedStatement.setDate(data, new java.sql.Date(vendedor.getAniversario().getTime()));
+            preparedStatement.setDouble(salario, vendedor.getSalarioBase());
+            preparedStatement.setInt(idDeparmento, vendedor.getDepartament().getId());
+            preparedStatement.setInt(idVendedor, vendedor.getId());
 
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new DbException(e.getMessage());
+        } finally {
+            Db.fechandoStatement(preparedStatement);
+        }
     }
 
     @Override

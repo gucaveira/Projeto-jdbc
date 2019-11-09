@@ -37,5 +37,11 @@ public class Programa {
                 new Date(), 4000.0, departamento);
         vendedorDao.inserir(novoVendedor);
         System.out.println("Inserido novo Id = " + novoVendedor.getId());
+
+        System.out.println("\n=== TEST 5: vendas insere ===");
+        vendedor = vendedorDao.procurarPorId(1);
+        vendedor.setNome("Marta");
+        vendedorDao.atualizar(vendedor);
+        System.out.println("Atualizacão completada");
     }
 }

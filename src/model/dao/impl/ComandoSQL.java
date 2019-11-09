@@ -21,4 +21,8 @@ public interface ComandoSQL {
             "(Nome, Email, Aniversario, SalarioBase, DepartamentoId)" +
             " VALUES " +
             "(?,?,?,?,?)";
+
+String  SQL_ATUALIZAR = "UPDATE vendas " +
+        "SET Nome = ?, Email = ?, Aniversario = ?, SalarioBase = ?, DepartamentoId = ? " +
+        " WHERE Id = ?";
 }
