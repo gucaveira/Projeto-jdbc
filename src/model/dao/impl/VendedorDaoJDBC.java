@@ -87,7 +87,18 @@ public class VendedorDaoJDBC implements VendedorDao, Contantes, ComandoSQL {
 
     @Override
     public void deletarPorId(Integer id) {
+        int idParaDeletar = 1;
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = conn.prepareStatement(SQL_DELETAR);
+            preparedStatement.setInt(idParaDeletar, id);
 
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new DbException(e.getMessage());
+        } finally {
+            Db.fechandoStatement(preparedStatement);
+        }
     }
 
     @Override

@@ -22,7 +22,9 @@ public interface ComandoSQL {
             " VALUES " +
             "(?,?,?,?,?)";
 
-String  SQL_ATUALIZAR = "UPDATE vendas " +
-        "SET Nome = ?, Email = ?, Aniversario = ?, SalarioBase = ?, DepartamentoId = ? " +
-        " WHERE Id = ?";
+    String SQL_ATUALIZAR = "UPDATE vendas " +
+            "SET Nome = ?, Email = ?, Aniversario = ?, SalarioBase = ?, DepartamentoId = ? " +
+            " WHERE Id = ?";
+
+    String SQL_DELETAR = "DELETE FROM vendas WHERE id =?";
 }

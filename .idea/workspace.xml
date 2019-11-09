@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0867397-e62b-4e55-a3d9-825cc0967456" name="Default Changelist" comment="Corrindo Bug para insere">
+    <list default="true" id="f0867397-e62b-4e55-a3d9-825cc0967456" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aplicacao/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aplicacao/Programa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/dao/impl/ComandoSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/ComandoSQL.java" afterDir="false" />
@@ -151,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573268213798</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="implementando Atualizacao">
+      <created>1573269766952</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573269766952</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,6 +183,7 @@
     <MESSAGE value="Procurar Por Departamento implementado" />
     <MESSAGE value="Procurar Tudo implementado" />
     <MESSAGE value="Corrindo Bug para insere" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrindo Bug para insere" />
+    <MESSAGE value="implementando Atualizacao" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementando Atualizacao" />
   </component>
 </project>
