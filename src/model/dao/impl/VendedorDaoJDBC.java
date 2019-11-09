@@ -6,10 +6,7 @@ import model.dao.VendedorDao;
 import model.entidade.Departamento;
 import model.entidade.Vendedor;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,8 +22,40 @@ public class VendedorDaoJDBC implements VendedorDao, Contantes, ComandoSQL {
     }
 
     @Override
-    public void inserir(Vendedor obj) {
+    public void inserir(Vendedor vendedor) {
+        int nome = 1;
+        int email = 2;
+        int data = 3;
+        int salario = 4;
+        int idDeparmento = 5;
 
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = conn.prepareStatement(SQL_INSERE, Statement.RETURN_GENERATED_KEYS);
+            preparedStatement.setString(nome, vendedor.getNome());
+            preparedStatement.setString(email, vendedor.getEmail());
+            preparedStatement.setDate(data, new java.sql.Date(vendedor.getAniversario().getTime()));
+            preparedStatement.setDouble(salario, vendedor.getSalarioBase());
+            preparedStatement.setInt(idDeparmento, vendedor.getDepartament().getId());
+
+            int linhasAfetada = preparedStatement.executeUpdate();
+
+            if (linhasAfetada > 0) {
+                ResultSet resultSet = preparedStatement.getGeneratedKeys();
+                if (resultSet.next()) {
+                    int id = resultSet.getInt(1);
+                    vendedor.setId(id);
+                }
+                Db.fechandoResultSet(resultSet);
+            } else {
+                throw new DbException("Erro inesperado nem uma linha afetada");
+            }
+
+        } catch (SQLException e) {
+            throw new DbException(e.getMessage());
+        } finally {
+            Db.fechandoStatement(preparedStatement);
+        }
     }
 
     @Override

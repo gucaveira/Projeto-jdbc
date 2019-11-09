@@ -7,7 +7,7 @@ public class Vendedor implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private int id;
+    private Integer id;
     private String nome;
     private String email;
     private Date Aniversario;
@@ -18,7 +18,7 @@ public class Vendedor implements Serializable {
     public Vendedor() {
     }
 
-    public Vendedor(int id, String nome, String email, Date aniversario, Double salarioBase, Departamento departament) {
+    public Vendedor(Integer id, String nome, String email, Date aniversario, Double salarioBase, Departamento departament) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -27,7 +27,7 @@ public class Vendedor implements Serializable {
         this.departament = departament;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

@@ -16,4 +16,9 @@ public interface ComandoSQL {
             " FROM vendas INNER JOIN departamento " +
             " ON vendas.DepartamentoId = departamento.Id " +
             " ORDER BY Nome";
+
+    String SQL_INSERE = "INSERT INTO vendas " +
+            "(Nome, Email, Aniversario, SalarioBase, DepartamentoId)" +
+            " VALUES " +
+            "(?,?,?,?,?)";
 }

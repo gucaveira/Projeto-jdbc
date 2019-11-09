@@ -5,6 +5,7 @@ import model.dao.VendedorDao;
 import model.entidade.Departamento;
 import model.entidade.Vendedor;
 
+import java.util.Date;
 import java.util.List;
 
 public class Programa {
@@ -24,11 +25,17 @@ public class Programa {
             System.out.println(vend);
         }
 
-        System.out.println("\n=== TEST 2: vendas procuraTudo ===");
+        System.out.println("\n=== TEST 3: vendas procuraTudo ===");
         vendedores = vendedorDao.procurarTodos();
         for (Vendedor vend :
                 vendedores) {
             System.out.println(vend);
         }
+
+        System.out.println("\n=== TEST 4: vendas insere ===");
+        Vendedor novoVendedor = new Vendedor(null,"Greg", "greg@gmail.com",
+                new Date(), 4000.0, departamento);
+        vendedorDao.inserir(novoVendedor);
+        System.out.println("Inserido novo Id = " + novoVendedor.getId());
     }
 }
